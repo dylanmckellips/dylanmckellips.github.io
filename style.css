@@ -47,6 +47,12 @@ body {
   gap: 20px;
 }
 
+.main section {
+    display: flex;
+    flex-direction: column; /* stack everything inside each section vertically */
+    gap: 15px;              /* spacing inside section */
+}
+
 /* Top navigation bar */
 .topnav {
   display: flex;
