@@ -74,14 +74,19 @@ h2 {
 
 /* Portfolio grid */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
+    width: 300%;       /* fills the grid cell */
+    height: 400px;     /* all images same height */
+    object-fit: cover; /* crops & centers image nicely */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* subtle zoom on hover */
 }
