@@ -96,3 +96,22 @@ h2 {
 .gallery img:hover {
     transform: scale(1.05); /* subtle zoom on hover */
 }
+
+
+.gallery-square {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* grid layout */
+  gap: 15px; /* space between images */
+}
+
+.gallery-square img {
+  width: 100%;       /* fills the grid cell */
+  aspect-ratio: 1/1; /* makes it a perfect square */
+  object-fit: cover; /* crops and centers image */
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-square img:hover {
+  transform: scale(1.05); /* subtle zoom on hover */
+}
