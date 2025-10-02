@@ -9,20 +9,11 @@
 </head>
 <body>
   <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="me.jpg" alt="My Photo">
-    <a href="https://linkedin.com/in/...">LinkedIn</a>
-    <a href="https://scholar.google.com/...">Google Scholar</a>
-    <a href="mailto:me@email.com">Contact</a>
-  </div>
+  <div id="sidebar"></div>
 
   <!-- Main -->
   <div class="main">
-    <!-- Top Navigation -->
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-    </div>
+    <div id="topnav"></div>
 
     <!-- Content -->
     <h1>Welcome</h1>
@@ -40,5 +31,15 @@
     <h2>Talks</h2>
     <p>[Talk details]</p>
   </div>
+
+    <script>
+    async function includeHTML(id, file) {
+      const resp = await fetch(file);
+      const html = await resp.text();
+      document.getElementById(id).innerHTML = html;
+    }
+    includeHTML("sidebar", "components/sidebar.html");
+    includeHTML("topnav", "components/topnav.html");
+  </script>
 </body>
 </html>
