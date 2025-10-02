@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    .sidebar img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .sidebar a {
+      display: block;
+      margin: 8px 0;
+      color: #333;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .topnav {
+      display: flex;
+      background: #333;
+      padding: 10px;
+    }
+    .topnav a {
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    .topnav a:hover {
+      background: #575757;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 4px;
+    }
+    /* Portfolio grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="me.jpg" alt="My Photo">
+    <a href="https://linkedin.com/in/...">LinkedIn</a>
+    <a href="https://scholar.google.com/...">Google Scholar</a>
+    <a href="mailto:me@email.com">Contact</a>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+    </div>
+
+    <h1>Photo Portfolio</h1>
+    <p>[You can divide this into collections—Nature, Travel, etc.]</p>
+
+    <h2>Collection: Nature</h2>
+    <div class="gallery">
+      <img src="photos/nature1.jpg" alt="Nature 1">
+      <img src="photos/nature2.jpg" alt="Nature 2">
+      <img src="photos/nature3.jpg" alt="Nature 3">
+    </div>
+
+    <h2>Collection: Travel</h2>
+    <div class="gallery">
+      <img src="photos/travel1.jpg" alt="Travel 1">
+      <img src="photos/travel2.jpg" alt="Travel 2">
+    </div>
+  </div>
+</body>
+</html>
