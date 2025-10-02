@@ -1,0 +1,84 @@
+/* General layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar p {
+  margin: 5px 0 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+.sidebar a {
+  display: block;
+  margin: 8px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Top navigation bar */
+.topnav {
+  display: flex;
+  background: #333;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.topnav a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background: #575757;
+}
+
+/* Section headers */
+h2 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 4px;
+  margin-top: 30px;
+}
+
+/* Portfolio grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
