@@ -1,7 +1,7 @@
 /* General layout */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Cambria Math', Cambria, serif;
   display: flex;
   height: 100vh;
 }
