@@ -79,24 +79,30 @@ h2 {
 }
 
 /* Portfolio grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(autofit,  minmax(200px, 1fr));
-   max-width: 1200px;
-    gap: 15px;
-  margin: 0 auto;
+.gallery-container {
+  width: 100%;           /* full width of the parent (screen) */
+  max-width: 1200px;     /* optional: prevents extreme stretching on large screens */
+  margin: 0 auto;        /* centers the gallery horizontally */
+  padding: 0 10px;       /* small padding so images don't touch the edge */
+  box-sizing: border-box; /* include padding in width */
 }
 
-.gallery img {
-    width: 100%;       /* fills the grid cell */
-    aspect-ratio: 3/4;     /* all images same height */
-    object-fit: cover; /* crops & centers image nicely */
-    border-radius: 8px;
-    transition: transform 0.3s;
+.gallery-3-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr)); /* responsive columns */
+  gap: 15px;
 }
 
-.gallery img:hover {
-    transform: scale(1.05); /* subtle zoom on hover */
+.gallery-3-4 img {
+  width: 100%;
+  aspect-ratio: 3/4;  /* keeps images 3:4 */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-3-4 img:hover {
+  transform: scale(1.05);
 }
 
 
