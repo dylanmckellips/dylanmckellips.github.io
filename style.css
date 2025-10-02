@@ -89,13 +89,13 @@ h2 {
 
 .gallery-3-4 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* responsive columns */
+  grid-template-columns: repeat(2, 1fr); /* responsive columns */
   gap: 15px;
 }
 
 .gallery-3-4 img {
   width: 100%;
-  aspect-ratio: 3/4;  /* keeps images 3:4 */
+  aspect-ratio: 4/3;  /* keeps images 3:4 */
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s;
