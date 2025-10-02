@@ -81,7 +81,7 @@ h2 {
 /* Portfolio grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(2 minmax(200px, 1fr));
     gap: 15px;
 }
 
@@ -100,7 +100,7 @@ h2 {
 
 .gallery-square {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* grid layout */
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); /* grid layout */
   gap: 15px; /* space between images */
 }
 
