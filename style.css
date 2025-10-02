@@ -81,13 +81,13 @@ h2 {
 /* Portfolio grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2 minmax(200px, 1fr));
+    grid-template-columns: repeat(autofit,  minmax(200px, 1fr));
     gap: 15px;
 }
 
 .gallery img {
-    width: 300%;       /* fills the grid cell */
-    height: 400px;     /* all images same height */
+    width: 100%;       /* fills the grid cell */
+    aspect-ratio: 3/4;     /* all images same height */
     object-fit: cover; /* crops & centers image nicely */
     border-radius: 8px;
     transition: transform 0.3s;
@@ -100,7 +100,7 @@ h2 {
 
 .gallery-square {
   display: grid;
-  grid-template-columns: repeat(auto, minmax(300px, 1fr)); /* grid layout */
+  grid-template-columns: repeat(auto, minmax(400px, 1fr)); /* grid layout */
   gap: 15px; /* space between images */
 }
 
