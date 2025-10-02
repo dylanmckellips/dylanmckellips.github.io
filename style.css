@@ -82,7 +82,9 @@ h2 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(autofit,  minmax(200px, 1fr));
+   max-width: 1200px;
     gap: 15px;
+  margin: 0 auto;
 }
 
 .gallery img {
@@ -102,6 +104,8 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto, minmax(400px, 1fr)); /* grid layout */
   gap: 15px; /* space between images */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery-square img {
