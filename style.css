@@ -82,7 +82,7 @@ h2 {
 }
 
 .gallery-3-4 img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 
@@ -103,7 +103,7 @@ h2 {
 }
 
 .gallery-square img:hover {
-  transform: scale(1.05); /* subtle zoom on hover */
+  transform: scale(1.1); /* subtle zoom on hover */
 }
 
 
