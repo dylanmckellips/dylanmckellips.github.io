@@ -90,7 +90,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* grid layout */
   gap: 15px; /* space between images */
-  max-width: 1200px;
+  
   margin: 0 auto;
 }
 
