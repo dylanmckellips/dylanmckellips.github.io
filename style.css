@@ -3,7 +3,32 @@ body {
   margin: 0;
   font-family: 'Cambria Math', Cambria, serif;
   display: flex;
+  flex-direction: column; /* topnav at top, content below */
   height: 100vh;
+}
+
+/* Top navigation bar */
+.topnav {
+  display: flex;
+  background: #333;
+  padding: 10px;
+}
+
+.topnav a {
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background: #575757;
+}
+
+/* Wrapper for sidebar + main */
+.content {
+  display: flex;  /* side-by-side layout */
+  flex: 1;        /* fill remaining height */
+  overflow: hidden;
 }
 
 /* Sidebar */
@@ -12,29 +37,13 @@ body {
   background-color: #f4f4f4;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  flex-shrink: 0;  /* prevent sidebar from shrinking */
 }
 
 .sidebar img {
   width: 100%;
   border-radius: 50%;
   margin-bottom: 10px;
-}
-
-.sidebar p {
-  margin: 5px 0 15px;
-  color: #555;
-  font-size: 14px;
-}
-
-.sidebar a {
-  display: block;
-  margin: 8px 0;
-  color: #333;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  text-decoration: underline;
 }
 
 /* Main content */
