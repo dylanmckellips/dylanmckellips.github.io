@@ -3,28 +3,15 @@ body {
   margin: 0;
   font-family: 'Cambria Math', Cambria, serif;
   display: flex;
+  flex-direction: column; /* topnav at the top, then content below */
   height: 100vh;
 }
-/* Top Navigation */
-.topnav {
-  position: relative,
-  clear: both,
-  width: 100%;
-  background-color: #333;
-  overflow: hidden;
+
+/* Layout wrapper for sidebar + main */
+.main-container {
   display: flex;
-  justify-content: center; /* center links */
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  display: block;
-}
-
-.topnav a:hover {
-  background-color: #575757;
+  flex: 1;
+  overflow: hidden;
 }
 
 /* Sidebar */
@@ -32,7 +19,7 @@ body {
   width: 250px;
   padding: 20px;
   background-color: #f5f5f5;
-  float: left;   /* makes sidebar on left */
+  flex-shrink: 0; /* don’t let sidebar shrink */
 }
 
 .sidebar img.profile-photo {
@@ -41,19 +28,9 @@ body {
   margin-bottom: 10px;
 }
 
-.sidebar a {
-  display: block;
-  margin: 10px 0;
-  color: #333;
-  text-decoration: none;
-}
-
-
-
 /* Main content */
 .main {
   flex: 1;
-
   padding: 20px;
   overflow-y: auto;
   display: flex;
