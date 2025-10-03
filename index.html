@@ -102,8 +102,10 @@
       document.getElementById(id).innerHTML = html;
     }
     includeHTML("sidebar", "/components/sidebar.html");
-    includeHTML("topnav-placeholder", "/components/topnav.html");
-  </script>
+includeHTML("topnav-placeholder", "/components/topnav.html", function() {
+      initTopnav(); // This calls the animation
+    });
+    </script>
 
   <script type="application/ld+json">
 {
