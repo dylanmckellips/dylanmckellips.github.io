@@ -23,7 +23,7 @@
     <div class="main">
 
     <h1>Gallery</h1>
-    <p> TEST This is a (very sparse) collection of some photographs I've taken over the years. It might become somewhat more complete at some point in time, possibly. I also post some photos <a href="https://www.instagram.com/dys_photos/" target="_blank" rel="noopener noreferrer" >here.</a></p>
+    <p>This is a (very sparse) collection of some photographs I've taken over the years. It might become somewhat more complete at some point in time, possibly. I also post some photos <a href="https://www.instagram.com/dys_photos/" target="_blank" rel="noopener noreferrer" >here.</a></p>
     
 
     <h2>Great Divide</h2>
@@ -68,5 +68,15 @@
 </div>
     </div>
   </div>
+
+       <script>
+    async function includeHTML(id, file) {
+      const resp = await fetch(file);
+      const html = await resp.text();
+      document.getElementById(id).innerHTML = html;
+    }
+    includeHTML("sidebar", "components/sidebar.html");
+    includeHTML("topnav", "components/topnav.html");
+  </script>
 </body>
 </html>
