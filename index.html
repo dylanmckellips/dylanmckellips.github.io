@@ -9,12 +9,15 @@
 <meta name="keywords" content="Dylan McKellips, computer science, math, portfolio, research, projects">
 
   <link rel="icon" type="image/png" href="/images/butterfly.png">
+
+    <script src="/components/topnav.js"></script>
+
 </head>
 <body>
 
       <!-- Top Navigation Bar -->
-    <div class="topnav" id="topnav">
-    </div>
+     <div id="topnav-placeholder"></div>
+
   <!-- Sidebar -->
 
   <!-- Main --> 
@@ -99,7 +102,7 @@
       document.getElementById(id).innerHTML = html;
     }
     includeHTML("sidebar", "/components/sidebar.html");
-    includeHTML("topnav", "/components/topnav.html");
+    includeHTML("topnav-placeholder", "/components/topnav.html");
   </script>
 
   <script type="application/ld+json">
