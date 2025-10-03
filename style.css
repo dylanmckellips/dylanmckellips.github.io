@@ -90,7 +90,7 @@ h2 {
 /* Portfolio grid */
 .gallery-container {
   width: 100%;           /* full width of the parent (screen) */
-  max-width: 1200px;     /* optional: prevents extreme stretching on large screens */
+ /* max-width: 1200px;  */   /* optional: prevents extreme stretching on large screens */
   margin: 0 auto;        /* centers the gallery horizontally */
   padding: 0 10px;       /* small padding so images don't touch the edge */
   box-sizing: border-box; /* include padding in width */
