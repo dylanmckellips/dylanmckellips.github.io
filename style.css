@@ -1,84 +1,55 @@
-/* General layout */
-body {
-  margin: 0;
-  font-family: 'Cambria Math', Cambria, serif;
-  display: flex;
-  flex-direction: column; /* topnav at top, content below */
-  height: 100vh;
-}
+    /* General layout */
+    body {
+      margin: 0;
+      font-family: 'Cambria Math', Cambria, serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-/* Top navigation bar */
-.topnav {
-  display: flex;
-  background: #333;
-  padding: 10px;
-}
+    /* Top navigation bar */
+    .topnav {
+      display: flex;
+      background: #333;
+      padding: 10px;
+    }
+    .topnav a {
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    .topnav a:hover {
+      background: #575757;
+    }
 
-.topnav a {
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-}
+    /* Main container - holds sidebar and main content */
+    .main-container {
+      display: flex;
+      flex: 1;
+      min-height: calc(100vh - 52px); /* subtract topnav height */
+    }
 
-.topnav a:hover {
-  background: #575757;
-}
+    /* Sidebar */
+    #sidebar {
+      width: 280px;
+      background-color: #f4f4f4;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+    #sidebar img {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
 
-/* Wrapper for sidebar + main */
-.content {
-  display: flex;  /* side-by-side layout */
-  flex: 1;        /* fill remaining height */
-  overflow: hidden;
-}
-
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  background-color: #f4f4f4;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  flex-shrink: 0;  /* prevent sidebar from shrinking */
-}
-
-.sidebar img {
-  width: 100%;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-/* Main content */
-.main {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.main section {
-    display: flex;
-    flex-direction: column; /* stack everything inside each section vertically */
-    gap: 15px;              /* spacing inside section */
-}
-
-/* Top navigation bar */
-.topnav {
-  display: flex;
-  background: #333;
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.topnav a {
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  background: #575757;
-}
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+      background: white;
+    }
 
 /* Section headers */
 h2 {
