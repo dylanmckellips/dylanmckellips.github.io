@@ -1,29 +1,23 @@
 <div class="topnav">
-   
-
+   <canvas id="graphCanvas"></canvas>
   <a href="index.html">Home</a>
   <a href="portfolio.html">Portfolio</a>
 </div>
-
-
 <script>
-  // Wait for canvas to be properly sized // <canvas id="graphCanvas"></canvas> goes in div later
- document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('graphCanvas');
+    const ctx = canvas.getContext('2d'); // ← YOU WERE MISSING THIS LINE!
     
-  function resizeCanvas() {
-    // Get the actual rendered size
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width;
-    canvas.height = rect.height;
-    
-    console.log('Canvas size:', canvas.width, canvas.height); // Debug line
-  }
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+      console.log('Canvas size:', canvas.width, canvas.height);
+    }
     
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     
-    // Generate random graph
     const nodeCount = 12;
     const nodes = [];
     const edges = [];
@@ -84,5 +78,5 @@
     }
     
     animate();
-    });
+  });
 </script>
