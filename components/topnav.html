@@ -8,14 +8,13 @@
 
 <script>
   // Wait for canvas to be properly sized
-  setTimeout(() => {
+ document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('graphCanvas');
-    const ctx = canvas.getContext('2d');
     
     function resizeCanvas() {
       canvas.width = canvas.offsetWidth;
       canvas.height = canvas.offsetHeight;
-    }
+    
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     
@@ -80,5 +79,5 @@
     }
     
     animate();
-  }, 100); // 100ms delay to let DOM settle
+    });
 </script>
