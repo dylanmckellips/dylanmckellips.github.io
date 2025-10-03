@@ -11,10 +11,14 @@
  document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('graphCanvas');
     
-    function resizeCanvas() {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    }
+  function resizeCanvas() {
+    // Get the actual rendered size
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
+    
+    console.log('Canvas size:', canvas.width, canvas.height); // Debug line
+  }
     
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
