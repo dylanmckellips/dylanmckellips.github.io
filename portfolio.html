@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Dylan's Portfolio</title>
   <meta name="description" content="A showcase of Dylan McKellips' projects, papers, and coding work. Mainly photos.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <!-- Sidebar -->
@@ -75,8 +75,8 @@
       const html = await resp.text();
       document.getElementById(id).innerHTML = html;
     }
-    includeHTML("sidebar", "components/sidebar.html");
-    includeHTML("topnav", "components/topnav.html");
+    includeHTML("sidebar", "/components/sidebar.html");
+    includeHTML("topnav", "/components/topnav.html");
   </script>
 </body>
 </html>
