@@ -9,9 +9,11 @@
 
     /* Top navigation bar */
     .topnav {
+      position: relative;
       display: flex;
       background: #333;
       padding: 10px;
+      overflow: hidden;
     }
 
     .topnav canvas {
@@ -24,12 +26,15 @@
     }
 
     .topnav a {
+      position: relative;
+      z-index: 1;
       color: white;
       padding: 8px 16px;
       text-decoration: none;
     }
+
     .topnav a:hover {
-      background: #575757;
+      background: rgba(87, 87, 87, 0.7);
     }
 
     /* Main container - holds sidebar and main content */
