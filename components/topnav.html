@@ -11,8 +11,9 @@
   const ctx = canvas.getContext('2d');
 
   function resizeCanvas() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    const rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
   }
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
@@ -22,7 +23,6 @@
   const nodes = [];
   const edges = [];
 
-  // Nodes
   for (let i = 0; i < nodeCount; i++) {
     nodes.push({
       x: Math.random() * canvas.width,
@@ -32,23 +32,18 @@
     });
   }
 
-  // Random edges
   for (let i = 0; i < nodeCount; i++) {
     const connections = Math.floor(Math.random() * 3) + 2;
     for (let j = 0; j < connections; j++) {
       const target = Math.floor(Math.random() * nodeCount);
-      if (target !== i) {
-        edges.push([i, target]);
-      }
+      if (target !== i) edges.push([i, target]);
     }
   }
 
-  // --- Animation loop ---
   function animate() {
-    ctx.fillStyle = '#111'; // background
+    ctx.fillStyle = '#111';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // update positions
     nodes.forEach(node => {
       node.x += node.vx;
       node.y += node.vy;
@@ -57,9 +52,7 @@
       if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
     });
 
-    // draw edges
     ctx.strokeStyle = 'rgba(100, 150, 255, 0.3)';
-    ctx.lineWidth = 1;
     edges.forEach(([i, j]) => {
       ctx.beginPath();
       ctx.moveTo(nodes[i].x, nodes[i].y);
@@ -67,7 +60,6 @@
       ctx.stroke();
     });
 
-    // draw nodes
     ctx.fillStyle = 'rgba(100, 150, 255, 0.8)';
     nodes.forEach(node => {
       ctx.beginPath();
